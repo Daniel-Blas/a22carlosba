@@ -1,8 +1,8 @@
 // Táboa de multiplicar do 9
-// console.log("Táboa de multiplicar do 9");
-// for (let i = 0; i< 10; i++){
-//     console.log("9 * " +i +" = " +(9 * i));
-// }
+console.log("Táboa de multiplicar do 9");
+for (var i_1 = 0; i_1 < 10; i_1++) {
+    console.log("9 * " + i_1 + " = " + (9 * i_1));
+}
 // Sucesión de Fibonacci
 console.log("Sucesión de Fibonacci");
 var i = 0;
