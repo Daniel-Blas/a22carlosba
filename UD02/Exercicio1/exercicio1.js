@@ -27,7 +27,6 @@ do {
         falso = true;
     }
     else {
-        console.log("Dentro del parse Int");
         var n = parseInt(numero);
         if (n % 2 == 0) {
             console.log("El número " + n + " es par");
