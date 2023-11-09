@@ -32,7 +32,6 @@ do {
         console.log("No es un número");
         falso = true;
     } else {
-        console.log("Dentro del parse Int")
         let n = parseInt(numero);
         if (n % 2 == 0){
             console.log("El número " +n +" es par");
