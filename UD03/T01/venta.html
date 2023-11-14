@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Exemplo de ventá nova</h3>
+    <p id="url"></p>
+    <p id="protocolo"></p>
+    <p id="navegador"></p>
+    <p id="java"></p>
+</body>
+    <script type="text/javascript">
+        let url = document.getElementById("url");
+        let protocolo = document.getElementById("protocolo");
+        let navegador = document.getElementById("navegador");
+        let java = document.getElementById("java");
+
+        url.innerHTML= "URL: " +window.location;
+        protocolo.innerHTML= "Protocolo: " +window.location.protocol;
+        navegador.innerHTML= "Navegador: " +window.navigator.appCodeName;
+        java.innerHTML= "Java dispoñible: " +(window.navigator.javaEnabled()?"Sí":"No");
+    </script>
+</html>
