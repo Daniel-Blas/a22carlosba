@@ -15,6 +15,7 @@ function finCurso(){
 function finSemana(){
     let anhos =[];
     let fechaCumple = document.getElementById("fecha-cumple").value;
+    console.log(fechaCumple);
     let dia = fechaCumple.substring(8,10);
     let mes = fechaCumple.substring(5,7);
     for (let anho = new Date().getFullYear();anho <= 2100; anho++){
@@ -22,7 +23,9 @@ function finSemana(){
         fecha.setFullYear(anho)
         fecha.setMonth(mes -1);
         fecha.setDate(dia);
-        if (fecha.getDay() == 5 || fecha.getDay() == 6){
+
+        // Os Domingo é 0 e o Sabado é 6
+        if (fecha.getDay() == 0 || fecha.getDay() == 6){
             anhos.push(anho);
         }
     }
