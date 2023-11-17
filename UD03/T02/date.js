@@ -9,7 +9,7 @@ function finCurso(){
     let fecha = new Date();
     let fechaFin = new Date(2024, 6, 25);
     let dias = Math.round((fechaFin.getTime() - fecha.getTime()) / (1000 * 60 * 60 *24));
-    document.getElementById("fin-curso").innerHTML= "Faltan " +dias +" día(s) ata final de curso";
+    document.getElementById("fin-curso").innerHTML= `Faltan ${dias} día(s) ata final de curso`;
 }
 
 function finSemana(){
@@ -29,7 +29,7 @@ function finSemana(){
             anhos.push(anho);
         }
     }
-    document.getElementById("cumple").innerHTML = "Estos son os anos no que o teu cumpleanos cae en fin de semana:</br>" +anhos;
+    document.getElementById("cumple").innerHTML = `Estos son os anos no que o teu cumpleanos cae en fin de semana:</br> ${anhos}`;
 }
 
 function dataFormato(){
