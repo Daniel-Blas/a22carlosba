@@ -20,3 +20,10 @@ const amosarPaises = (arr) =>{
 }
 
 document.getElementById("sol2").innerHTML = amosarPaises(paises);
+
+// Exercicio 3
+const sentidoInverso = (arr) =>{
+    return amosarPaises(arr.reverse());
+}
+
+document.getElementById("sol3").innerHTML = sentidoInverso(paises);
