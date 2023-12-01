@@ -37,10 +37,8 @@ const engadirComezo = (arr, pais) =>{
     console.log(arr.unshift(pais));
     return arr;
 }
-paises = engadirComezo(paises, "Nueva Zelanda");
-console.log(paises);
 
-document.getElementById("sol4").innerHTML = amosarPaises(paises);
+document.getElementById("sol4").innerHTML = amosarPaises(engadirComezo(paises, "Nueva Zelanda"));
 
 
 // Exercicio 5
@@ -48,7 +46,20 @@ const engadirFinal = (arr, pais) =>{
     console.log(arr.push(pais));
     return arr;
 }
-paises = engadirFinal(paises, "Italia");
-console.log(paises);
 
-document.getElementById("sol5").innerHTML = amosarPaises(paises);
+document.getElementById("sol5").innerHTML = amosarPaises(engadirFinal(paises, "Italia"));
+
+
+// Exercicio 6
+const eliminarComezo = (arr) =>{
+    return arr.shift();
+}
+
+document.getElementById("sol6").innerHTML = eliminarComezo(paises);
+
+// Exercicio 7
+const eliminarFinal = (arr) =>{
+    return arr.pop();
+}
+
+document.getElementById("sol7").innerHTML = eliminarFinal(paises);
