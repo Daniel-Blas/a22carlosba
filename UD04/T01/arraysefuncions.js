@@ -63,3 +63,10 @@ const eliminarFinal = (arr) =>{
 }
 
 document.getElementById("sol7").innerHTML = eliminarFinal(paises);
+
+// Exercicio 8
+const amosarElementoPosicion = (arr) =>{
+    posicion = parseInt(prompt(`Indique unha posición entre 1 y ${arr.length}`)) -1;
+    console.log(posicion);
+    document.getElementById("sol8").innerHTML = arr [posicion];
+}
