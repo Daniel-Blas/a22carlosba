@@ -70,3 +70,16 @@ const amosarElementoPosicion = (arr) =>{
     console.log(posicion);
     document.getElementById("sol8").innerHTML = arr [posicion];
 }
+
+// Exercicio 9
+const amosarPosicionElemento = (arr) =>{
+    pais = prompt(`Indique un Pais: ${amosarPaises(arr)}`);
+    console.log(pais);
+    posicion = null;
+    for (let i in arr){
+        if (arr[i] == pais){
+            posicion =parseInt(i) +1;
+        }
+    }
+    document.getElementById("sol9").innerHTML = `${pais} se encuentra en la posición ${posicion}`;
+}
