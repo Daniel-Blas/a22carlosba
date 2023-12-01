@@ -1,5 +1,5 @@
 // Creación do array de paises
-let paises = ["España", "Portugal", "Andorra", "Francia", "Marruecos", "Reino Unido", "Irlanda", "Suiza", "Bélgica"];
+let paises = ["España", "Portugal", "Andorra", "Francia", "Marrocos", "Reino Unido", "Irlanda", "Suiza", "Bélxica"];
 
 
 // Exercicio 1
@@ -81,5 +81,14 @@ const amosarPosicionElemento = (arr) =>{
             posicion =parseInt(i) +1;
         }
     }
-    document.getElementById("sol9").innerHTML = `${pais} se encuentra en la posición ${posicion}`;
+    document.getElementById("sol9").innerHTML = `${pais} encontrase na posición ${posicion}`;
+}
+
+// Exercicio 10
+
+const duasPosicions = (arr) =>{
+    let pos1 = parseInt(prompt(`Indique a primeira posición: (Entre 1 e ${arr.length})`)) -1;
+    let pos2 = parseInt(prompt(`Indique a segunda posición: (Entre ${pos1 +1} e ${arr.length}`));
+    document.getElementById("sol10").innerHTML= amosarPaises(arr.slice(pos1, pos2));
+
 }
