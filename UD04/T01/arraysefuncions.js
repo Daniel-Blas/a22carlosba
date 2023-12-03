@@ -23,14 +23,17 @@ document.getElementById("sol2").innerHTML = amosarPaises(paises);
 
 // Exercicio 3
 const sentidoInverso = (arr) =>{
-    let paisesInv = "";
-    for (let i = arr.length -1; i>=0; i--){
-        paisesInv += (arr[i] + ", ");
-    }
-    return paisesInv.slice(0, paisesInv.length -2);
+    let temp = new Array(arr);
+    return temp.reverse();
+    // Outra solución
+    // let paisesInv = "";
+    // for (let i = arr.length -1; i>=0; i--){
+    //     paisesInv += (arr[i] + ", ");
+    // }
+    // return paisesInv.slice(0, paisesInv.length -2);
 }
 
-document.getElementById("sol3").innerHTML = sentidoInverso(paises);
+document.getElementById("sol3").innerHTML = amosarPaises(sentidoInverso(paises));
 
 // Exercicio 4
 const engadirComezo = (arr, pais) =>{
