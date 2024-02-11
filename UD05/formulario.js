@@ -1,40 +1,135 @@
-function recollerDatos(){
-    let nome = document.getElementById('nome').value;
-    let apelidos = document.getElementById('apelidos').value;
-    let idade = document.getElementById('idade').value;
-    let nif = document.getElementById('nif').value;
-    let email = document.getElementById('email').value;
+
+// let nome; 
+// let apelidos;
+// let idade;
+// let nif;
+// let email;
+// let provincia;
+// let contrasinal;
+// let nacemento;
+// let tel;
+// let vehiculos = [];
+// let linguaxe;
+// let error;
 
 
-    let provincias = document.getElementById('provincia');
-    let provincia = provincias.options[provincias.selectedIndex].value;
 
-    let contrasinal = document.getElementById('contrasinal').value;
-    let nacemento = document.getElementById('nacemento').value;
-    let telefono = document.getElementById('telefono').value;
+// function recollerDatos(){
 
-    let vehiculos = [];
-    if(document.getElementById('bici').checked){
-        vehiculos.push(document.getElementById('bici').value);
-    }
-    if(document.getElementById('coche').checked){
-        vehiculos.push(document.getElementById('coche').value);
-    }
-    if(document.getElementById('moto').checked){
-        vehiculos.push(document.getElementById('moto').value);
-    }
-    let linguaxe;
-    for (let i = 0; i < document.formulario.leng.length; i++){
-        if (document.formulario.leng[i].checked){
-            linguaxe = document.formulario.leng[i].value;
-        }
-    }
+    
+//     nome = document.getElementById('nome').value;
+//     apelidos = document.getElementById('apelidos').value;
+//     idade = document.getElementById('idade').value;
+
+//     nif = document.getElementById('nif').value;
+
+//     email = document.getElementById('email').value;
 
 
-    // alert(`${nome}  ${apelidos} ${idade} ${nif} ${email} ${provincia} ${contrasinal} ${nacemento} ${telefono} ${vehiculos} ${linguaxe}`);
-}
+//     let provincias = document.getElementById('provincia');
+//     provincia = provincias.options[provincias.selectedIndex].value;
 
-window.onload = function(){
-    let enviar = document.getElementById("enviar");
-    enviar.addEventListener("click", recollerDatos, false);
-}
+//     contrasinal = document.getElementById('contrasinal').value;
+//     nacemento = document.getElementById('nacemento').value;
+
+//     tel = document.getElementById('telefono').value;
+
+//     if(document.getElementById('bici').checked){
+//         vehiculos.push(document.getElementById('bici').value);
+//     }
+//     if(document.getElementById('coche').checked){
+//         vehiculos.push(document.getElementById('coche').value);
+//     }
+//     if(document.getElementById('moto').checked){
+//         vehiculos.push(document.getElementById('moto').value);
+//     }
+//     linguaxe;
+//     for (let i = 0; i < document.formulario.leng.length; i++){
+//         if (document.formulario.leng[i].checked){
+//             linguaxe = document.formulario.leng[i].value;
+//         }
+//     }
+//     const dniRegex = /^[0-9]{8}[A-Z]{1}$/i;
+//     if (!dniRegex.test(nif)) {
+//         alert('O NIF no é válido.');
+//         return;
+//     }
+//     // Validar teléfono
+//     const telRegex = /^[0-9]{9}$/;
+//     if (!telRegex.test(tel)) {
+//         alert('O teléfono non é válido.');
+//         return;
+//     }
+
+//      // Validar campos
+//      if (!nome || !apelidos || !idade || !nif || !email || !provincia || !contrasinal || !nacemento || !tel) {
+//         alert('Por favor, complete todos los campos.');
+//         return false;
+//     } else {
+//         return true;
+//     }
+//     // Validar NIF
+
+
+//     // Guardar cookie con nombre de usuario
+//     // const nombreUsuario = prompt('Introduce tu nombre de usuario:');
+//     // document.cookie = `nombreUsuario=${nombreUsuario}`;
+
+//     // alert(`${nome}  ${apelidos} ${idade} ${nif} ${email} ${provincia} ${contrasinal} ${nacemento} ${telefono} ${vehiculos} ${linguaxe}`);
+// }
+
+
+// function setCookie(cnome, cvalor, exdays) {
+//     let d = new Date();
+//     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+//     let expira = "expires=" + d.toGMTString();
+//     document.cookie = cnome + "=" + cvalor + ";" + expira + ";path=/";
+//     }
+
+// function getCookie(cnome) {
+//     let nome = cnome + "=";
+//     let decodedCookie = decodeURIComponent(document.cookie);
+//     let ca = decodedCookie.split(';');
+//     for (let i = 0; i < ca.length; i++) {
+//     let c = ca[i];
+//     c = c.trim();
+//     if (c.indexOf(nome) == 0) {
+//     return c.substring(nome.length, c.length);
+//     }
+//     }
+//     return "";
+//     }
+
+
+// window.onload = function(){
+
+//     let verCookie = document.getElementById("verCookie");
+//     verCookie.addEventListener("click", function() {
+//         document.getElementById("cookie").innerHTML = getCookie("usuario");
+//     }, false);
+    
+//     let borrarCookie = document.getElementById("borrarCookie");
+//     borrarCookie.addEventListener("click", function() {
+//         if (getCookie("usuario").length > 0){
+//             setCookie("usuario",getCookie("usuario"), -100);
+//         }
+//     }, false);
+    
+//     let enviar = document.getElementById("enviar");
+//     enviar.addEventListener("click",function(event) {
+//         if (!recollerDatos()){
+//             event.preventDefault();
+//         }else {
+            
+//             // comprobar se xa existe cookie
+//             if (getCookie("usuario").length < 1){
+//                 let usuario = prompt("introduce o teu nome de usuario:");
+//                 setCookie("usuario", usuario, 365);
+//             }
+            
+//         }
+//         }, false);
+// }
+
+
+

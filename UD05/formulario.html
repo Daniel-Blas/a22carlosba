@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <script src="formulario.js" defer></script>
+    <script src="ts/formulario.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <fieldset>
     <legend>Formulario</legend>
     <form action="#" id="formulario" name="formulario">
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="50">
         <label for="apelidos">Apelidos</label>
-        <input type="text" name="apelidos" id="apelidos">
+        <input type="text" name="apelidos" id="apelidos" required minlength="2" maxlength="50">
         <label for="idade">Idade</label>
-        <input type="number" name="idade" id="idade">
+        <input type="number" name="idade" id="idade" required min="1">
         <label for="nif">NIF</label>
-        <input type="text" name="nif" id="nif">
+        <input type="text" name="nif" id="nif" required>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         <label for="provincia">Provincia</label>
         <select name="provincia" id="provincia">
             <option value="A Coruña">A Coruña</option>
@@ -28,9 +29,9 @@
             <option value="Pontevedra">Pontevedra</option>
         </select>
         <label for="contrasinal">Contrasinal</label>
-        <input type="password" name="contrasinal" id="contrasinal">
+        <input type="password" name="contrasinal" id="contrasinal" required minlength="4" maxlength="20">
         <label for="nacemento">Data de nacemento</label>
-        <input type="date" name="nacemento" id="nacemento">
+        <input type="date" name="nacemento" id="nacemento" required>
         <label for="telefono">Telefono</label>
         <input type="tel" name="telefono" id="telefono">
         <label>Vehiculos:</label>
@@ -49,9 +50,15 @@
         <label for="javascript">JavaScript</label>
 
         <input type="submit" id="enviar" value="Enviar">
+        <p id="error"></p>
 
     </form>
 </fieldset>
+
+<button id="borrarCookie">Borrar cookies</button>
+<button id="verCookie">Ver cookies</button>
+<p id="cookie"></p>
+
 
 </body>
 </html>
