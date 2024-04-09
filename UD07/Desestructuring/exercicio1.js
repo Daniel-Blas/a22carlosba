@@ -120,32 +120,3 @@ for (const {
 }
 
 // 1.7 Usando o exemplo que tes nos apuntes modifícao para que che diga se unha lista de parámetros recibidos son primos (todos) ou non
-const primos = (...nums) => {
-    nums.reduce((total, num) => {
-        if (isPrime(num))
-            total + num;
-        return total;
-    })
-    if (total >0)
-        return false;
-
-}
-// nums.reduce((num) => isPrime(num));
-console.log("Total: ", primos(5,7,13));
-
-
-
-
-function isPrime(n) 
-{ 
-    // Corner case 
-    if (n <= 1) 
-        return false; 
-   
-    // Check from 2 to n-1 
-    for (let i = 2; i < n; i++) 
-        if (n % i == 0) 
-            return false; 
-   
-    return true; 
-} 
