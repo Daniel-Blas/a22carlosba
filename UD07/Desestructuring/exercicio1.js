@@ -118,5 +118,3 @@ for (const {
     if (!p)
         console.log(n)
 }
-
-// 1.7 Usando o exemplo que tes nos apuntes modifícao para que che diga se unha lista de parámetros recibidos son primos (todos) ou non
