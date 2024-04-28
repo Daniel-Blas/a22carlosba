@@ -43,6 +43,3 @@ function notaMedia(){
 })
 }
 
-function colorAprobado(e){
-
-}
