@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biblioteca</title>
+	<!-- Importamos Vue a través do CDN -->
+	
+</head>
+
+<body>
+	<header>
+		<h3>Biblioteca</h3>
+	</header>
+	
+	<div id="app">
+		
+	</div>
+	
+	<div id="listar">
+		<ul>
+			<h3>Lista de libros</h3>
+			<li v-for="libro in libros" >
+				{{libro.nombre}}, {{libro.autor}}
+				
+			</li>
+		</ul>
+	</div>
+
+	<footer>
+		<p>Footer</p>
+	</footer>
+	
+	<script type="text/javascript" src="jQuery/jquery-3.7.1.min.js"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="biblioteca.js"></script>
+</body>
+
+</html>
