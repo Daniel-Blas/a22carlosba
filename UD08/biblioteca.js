@@ -1,36 +1,25 @@
-// array de libros
 
-let libros = [
-    { "nombre": "nombre libro 1", "autor": "autor 1", "resumen": "resumen libro 1" },
-    { "nombre": "nombre libro 2", "autor": "autor 2", "resumen": "resumen libro 2" },
-    { "nombre": "nombre libro 3", "autor": "autor 3", "resumen": "resumen libro 3" }
-];
-
-
-const App = {
+// Creación da app
+const App = Vue.createApp ({
     data() {
         return {
-            valor: "hola"
+            // variable para mostrar a lista
+            mostrar : false,
+            // os datos de todos os libros
+            libros : [
+                {id : 1, nombre : "El grito de la luchuza", autor : "Patricia Highsmith"},
+                {id : 2, nombre : "Rescate en el tiempo (1999-1357)", autor : "Michael Crichton"},
+                {id : 3, nombre : "Os Biosbardos", autor : "Eduardo Blanco Amor"},
+                {id : 4, nombre : "Yo, el jurado", autor : "Mickey Spillane"},
+                {id : 5, nombre : "Erehwon", autor : "Samuel Butler"},
+                {id : 6, nombre : "El imperio final", autor : "Brandon Sanders"},
+                {id : 7, nombre : "El martillo de Dios", autor : "Arthur C. Clarke"},
+                {id : 8, nombre : "Punto crítico (Airframe)", autor : "Michael Crichton"},
+                {id : 9, nombre : "Historias de Terramar I", autor : "Ursula K. Le Guin"},
+                {id : 10, nombre : "Falso movimiento", autor : "Alejandro Gándara"},
+                {id : 11, nombre : "Xente ao lonxe", autor : "Eduardo Blanco Amor"},
+                {id : 12, nombre : "Cosecha roja", autor : "Dashiell Hammett"},
+            ]
         }
-    },
-
-}
-
-Vue.createApp(App).mount('#app');
-
-
-
-
-const listar = {
-    data() {
-        return {
-            libros,
-            mostrar: false
-        }
-    },
-}
-// montar la app listar
-Vue.createApp(listar).mount("#listar");
-
-
-
+    }
+})

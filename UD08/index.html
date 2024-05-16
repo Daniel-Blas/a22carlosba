@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Biblioteca</title>
-		<!-- Importamos Vue a través do CDN -->
-		
-	</head>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biblioteca</title>
+	<!-- Importamos Vue a través do CDN -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
-	<header>
-		<h3>Biblioteca</h3>
-	</header>
-	
-	
-	<div id="listar">
-		<ul>
-			<h3>Lista de libros</h3>
-			<li v-for="libro in libros" >
-				{{libro.nombre}}, {{libro.autor}}
-				
-			</li>
-		</ul>
+	<!-- div onde vamos a montar a app -->
+	<div id="app">
+
+		<!-- uso de compoñente para a cabeceira -->
+		<cabecera></cabecera>
+
+		<div id="cuerpo">
+			<!-- función para cambiar o valor da variable mostrar -->
+			<p @:click="mostrar=!mostrar">Fai click aquí para ver a lista de libros.</p>
+			<!-- empleo de transición para mostrar e ocultar a lista de libros -->
+			<transition name="slide">
+
+				<!-- uso de v-if para ocultar e amosar a lista en función da variable mostrar-->
+				<ul v-if="mostrar">
+
+					<!-- uso dun loop for para xerar a lista de libros -->
+					<li v-for="l in libros">
+						<!-- e un compoñente para os items da lista, pasando o libro coa función v-bind -->
+						<lista-libros v-bind:libro="l"></lista-libros>
+					</li>
+
+				</ul>
+
+			</transition>
+		</div>
+
+		<!-- compoñente para o pé -->
+		<pe></pe>
+
 	</div>
-	
-	<footer>
-		<p>Footer</p>
-	</footer>
-	
-	<script type="text/javascript" src="jQuery/jquery-3.7.1.min.js"></script>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+	<!-- Importamos arquivo principal de javaScript -->
 	<script src="biblioteca.js"></script>
-    <script src="components/footer.js"></script>
-    <script>
-        const mountedApp = App.mount('#app');
-    </script>
+	<!-- E agora importamos os compoñentes -->
+	<script src="components/header.js"></script>
+	<script src="components/components.js"></script>
+	<script src="components/footer.js"></script>
+	<!-- Montamos a App -->
+	<script>
+		const mountedApp = App.mount('#app');
+	</script>
 </body>
 
 </html>

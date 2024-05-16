@@ -1,18 +1,8 @@
-Vue.component('pe', {
+App.component('pe', {
     template: `
-    <style>
-        footer {
-            text-align: center;
-            padding: 3px;
-            background-color: DarkSalmon;
-            color: white;
-        }
-    </style>
-    <footer>
-        <p>Author: Hege Refsnes<br>
-        <a href="mailto:hege@example.com">hege@example.com</a></p>
-    </footer>
-
-    `
-});   
-
+        <footer>
+            <p>Autor: Carlos Daniel Blas Andrade<br>
+            <a href="mailto:a22carlosba@iessanclemente.net">a22carlosba@iessanclemente.net</a></p>
+        </footer>
+        `
+})

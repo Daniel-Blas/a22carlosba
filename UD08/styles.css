@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+/* estilos xerais */
+#app {
+    color: white;
+    background-color: #7beab3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#cuerpo {
+    margin: auto;
+    padding: 20px;
+}
+
+/* estilo da cabeceira */
+.header {
+    margin: 10px ;
+    width: auto;
+    padding: 20px 0px;
+    text-align: center;
+    background: #7b7bea;
+    color: white;
+    font-size: 30px;
+}
+/* estilo do footer */
+footer {
+    padding: 20px;
+    width: 100vw;
+    text-align: center;
+    background-color: DarkSalmon;
+    color: white;
+}
+
+footer a {
+    color: #b3ea7b;
+    text-decoration: none;
+}
+
+
+
+/* parametros das transicións */
+.slide-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-leave-active {
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateX(-50px);
+    opacity: 0;
+}
